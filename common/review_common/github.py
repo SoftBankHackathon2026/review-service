@@ -22,7 +22,7 @@ import httpx
 from review_ai.errors import TransientError
 
 API = "https://api.github.com"
-DEFAULT_GITOPS_REPO = "Crystal-SBHackathon2026/gitops"
+DEFAULT_GITOPS_REPO = "SoftBankHackathon2026/gitops"
 FILE_MODE = "100644"
 log = logging.getLogger(__name__)
 
