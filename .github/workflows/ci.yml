@@ -86,7 +86,7 @@ jobs:
       matrix:
         service: [api, worker]
     env:
-      IMAGE: ghcr.io/crystal-sbhackathon2026/review-${{ matrix.service }}
+      IMAGE: ghcr.io/softbankhackathon2026/review-${{ matrix.service }}
     steps:
       - uses: actions/checkout@v7
 
@@ -127,11 +127,11 @@ jobs:
       - name: GitOps 레포 이미지 태그 갱신
         if: env.GITOPS_TOKEN != ''
         run: |
-          git clone "https://x-access-token:${GITOPS_TOKEN}@github.com/Crystal-SBHackathon2026/gitops.git"
+          git clone "https://x-access-token:${GITOPS_TOKEN}@github.com/SoftBankHackathon2026/gitops.git"
           cd gitops
           sed -i "s/newTag: .*/newTag: ${{ github.sha }}/" apps/review-service/kustomization.yaml
-          git config user.name "crystal-ci"
-          git config user.email "crystal-ci@users.noreply.github.com"
+          git config user.name "softbank-ci"
+          git config user.email "softbank-ci@users.noreply.github.com"
           if ! git commit -am "chore: review-service 이미지 태그 갱신 (${GITHUB_SHA::7})"; then
             echo "변경 없음"; exit 0
           fi

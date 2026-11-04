@@ -99,7 +99,7 @@ async def test_pass_auto_merged_and_deployed(env: Env) -> None:
     assert card(body, "gcp") == {"env": "gcp", "planned": True}
     assert body["links"] == {"pr": f"https://github.com/{REPO}/pull/12",
                              "merge_commit": f"https://github.com/{REPO}/commit/{MERGE}",
-                             "gitops_commit": f"https://github.com/Crystal-SBHackathon2026/gitops/commit/{GITOPS}"}
+                             "gitops_commit": f"https://github.com/SoftBankHackathon2026/gitops/commit/{GITOPS}"}
     assert body["final"] is True
     assert body["review"]["review_id"] == rid and body["latest_review_id"] is None
     assert body["intake"] is None

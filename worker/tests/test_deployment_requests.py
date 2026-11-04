@@ -26,7 +26,7 @@ from review_worker.request_gitops import RequestGitOps
 from tests.conftest import FakePublisher, load_sample, suite
 
 REPO = "Crystal-SBHackathon2026/sample-app"
-GITOPS = "Crystal-SBHackathon2026/gitops"
+GITOPS = "SoftBankHackathon2026/gitops"
 HEAD, FIX, MERGE = "a" * 40, "b" * 40, "c" * 40
 REGISTRY = frozenset({("aws", "ap-northeast-2", "in-cluster"), ("gcp", "asia-northeast1", "tokyo-gke"),
                       ("local", "busan-local", "crystal-busan")})

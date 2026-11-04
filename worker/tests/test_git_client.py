@@ -12,7 +12,7 @@ from review_ai.errors import TransientError
 from review_common.github import (GitHubClient, GitHubError, GitHubGitClient, ProtectedFileRemoval, git_blob_sha,
                                   is_protected)
 
-GITOPS = "Crystal-SBHackathon2026/gitops"
+GITOPS = "SoftBankHackathon2026/gitops"
 DIR = "apps/sample-app/overlays/aws"
 
 
